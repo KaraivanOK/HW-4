@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product</title>
+</head>
+<body>
+<table border=1 style="text-align:center">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Alcohol</th>
+        <th>More details</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in query_products %}
+        <tr>
+            <td> {{ product.name }} </td>
+            <td> {{ product.price }} </td>
+            <td> {{ product.alcohol }} </td>
+            <td>
+                <a href="/products/{{ product.id }}" class="btn btn-warning">Details</a>
+            </td>
+            <td>
+                <a href="/products/{{ product.id }}/del" class="btn btn-danger">Delete</a>
+            </td>
+            <td>
+                <a href="/products/{{ product.id }}/update" class="btn btn-danger">Update</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

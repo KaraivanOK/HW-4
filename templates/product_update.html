@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update product</title>
+</head>
+<body>
+<h1 style="text-align:center">Update product {{ product.name }}</h1>
+<form method="post" style="text-align:center">
+    <input type="text" name="name" id="name" class="form-control" value="{{ product.name }}"
+           placeholder="Enter product name">
+    <div style="text-align:center">
+        <input type="checkbox" id="alcohol" name="alcohol" value="yes">
+        <label for="alcohol">Alcohol.</label>
+        <input type="checkbox" id="alcohol" name="alcohol" value="no">
+        <label for="alcohol">Not Alcohol.</label>
+    </div>
+    <br>
+    <textarea name="specification" id="specification" class="form-control"
+              placeholder="Enter product description">{{ product.specification }}</textarea><br>
+    <textarea name="price" id="price" class="form-control"
+              placeholder="Enter the price of the product">{{ product.price }}</textarea><br>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+</body>
+</html>

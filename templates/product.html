@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product</title>
+</head>
+<body>
+<h1 style="text-align:center">{{ product.name }}</h1>
+<table border=1 style="text-align:center">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Alcohol</th>
+        <th>Specification</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> {{ product.name }} </td>
+        <td> {{ product.price }} </td>
+        <td> {{ product.alcohol }} </td>
+        <td> {{ product.specification }} </td>
+        <td> {{ product.date }} </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
